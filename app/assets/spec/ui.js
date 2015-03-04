@@ -10,7 +10,7 @@ describe('Index screen', function() {
 	});
 
 	it('creates a scrollableview for you and me and the rest of the world', function() {		
-		expect(index.getView("scrollableViewID")).notToBe(undefined);
+		expect(index.getView("scrollableViewID")).notToBe(null);
 	});
 
 	// go nuts! :-)
