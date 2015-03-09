@@ -6,7 +6,7 @@ nguage: objective-c
 env:
   - TI_SDK=3.5.0.GA IOS_VERSION=8.0
 script:
-  - titanium build 
+  - titanium build $TI_OPTS --platform android
 before_install:
   - export TI_OPTS="--no-progress-bars --no-prompt --no-banner --log-level info"
   - npm install --global titanium
