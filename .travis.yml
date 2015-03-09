@@ -9,7 +9,7 @@ script:
   - titanium build $TI_OPTS  --platform ios --ios-version $IOS_VERSION
 before_install:
   - export TI_OPTS="--no-progress-bars --no-prompt --no-banner --log-level info"
-  - npm install --global titanium@$TI_SDK
+  - npm install --global titanium@3.4.0
   - mkdir -p $HOME/.titanium
   - cp auth_session.json $HOME/.titanium/auth_session.json
   - titanium sdk install $TI_SDK $TI_OPTS
