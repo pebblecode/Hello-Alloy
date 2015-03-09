@@ -1,3 +1,15 @@
 language: node_js
 before_script: npm install -g titanium
 script: titanium build
+
+nguage: objective-c
+env:
+  - TI_SDK=3.4.0.GA IOS_VERSION=8.0
+script:
+  - titanium build $TI_OPTS --platform ios --ios-version $IOS_VERSION
+before_install:
+  - export TI_OPTS="--no-progress-bars --no-prompt --no-banner --log-level info"
+  - npm install --global titanium
+  - mkdir -p $HOME/.titanium
+  - cp auth_session.json $HOME/.titanium/auth_session.json
+  - titanium sdk install "$TI_SDK" $TI_OPTS
